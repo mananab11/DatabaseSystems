@@ -1,0 +1,1 @@
+db2 load from "C:\yourpath\Health_Facility_Certification_Information.csv" of del MESSAGES load.msg INSERT INTO cse532.facilitycertification;
