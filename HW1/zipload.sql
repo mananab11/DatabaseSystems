@@ -1,0 +1,1 @@
+load from "E:\Spring Projects\TODB\nyzip.csv" of del MESSAGES load.msg INSERT INTO CSE532.ZIPPOP;
