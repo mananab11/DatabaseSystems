@@ -1,0 +1,23 @@
+PySpark version used: 1.6.0
+######task 2########## 
+Hadoop:
+real: 1m0.163s
+user:  0m14.371s
+sys :  0m0.953s
+
+Spark:
+real: 0m19.056s
+user:  0m22.602s
+sys :  0m1.64s
+
+
+######task3###########3
+Hadoop:
+real: 0m58.287s
+user:  0m13.027s
+sys :  0m0.854s
+
+Spark:
+real: 0m22.074s
+user:  0m24.49s
+sys :  0m2.08s

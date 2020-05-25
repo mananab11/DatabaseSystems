@@ -1,0 +1,14 @@
+#Task 1
+hadoop jar /usr/lib/hadoop-mapreduce/hadoop-streaming.jar -files Covid19_1_mapper.py,Covid19_1_reduce.py -input /cse532/input/covid19_full_data.csv -output /cse532/output/task1op -mapper 'Covid19_1_mapper.py False'  -reducer Covid19_1_reduce.py -numReduceTasks 1
+
+
+#Task 2
+hadoop jar /usr/lib/hadoop-mapreduce/hadoop-streaming.jar -files Covid19_2_mapper.py,Covid19_2_reduce.py -input /cse532/input/covid19_full_data.csv -output /cse532/output/task2optimed -mapper 'Covid19_2_mapper.py 2020-04-04 2020-04-08'  -reducer Covid19_2_reduce.py -numReduceTasks 1
+#task 3
+hadoop jar /usr/lib/hadoop-mapreduce/hadoop-streaming.jar -files Covid19_3_mapper.py,Covid19_3_reduce.py -cacheFile '/cse532/cache/populations.csv#popcache' -input /cse532/input/covid19_full_data.csv -output /cse532/output/task3optimed -mapper 'Covid19_3_mapper.py'  -reducer 'Covid19_3_reduce.py'
+
+#spark task 2
+spark-submit --master local[1] SparkCovid19_1.py /cse532/input/covid19_full_data.csv 2020-04-04 2020-04-08 /cse532/output/task2spark
+#spark task 3
+spark-submit SparkCovid19_2.py /cse532/input/covid19_full_data.csv /cse532/input/populations.csv /cse532/output/sparktask3
+
